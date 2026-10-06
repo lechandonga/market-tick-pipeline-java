@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 业务覆盖日志：突出展示覆盖的业务分组、用例与断言情况 -->
+    <logger name="BUSINESS-COVERAGE" level="INFO"/>
+    <logger name="com.github.lechandonga.markettickpipelinejava" level="INFO"/>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
